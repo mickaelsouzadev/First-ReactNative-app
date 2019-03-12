@@ -1,13 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
+import {Container, Header, Title, Content, Text} from 'native-base';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.parag}> Esse é o meu primeiro app feito com React native</Text>
-      </View>
+      <Container>
+        <Header>
+          <Title>
+            Hello World
+          </Title>
+        </Header>
+        <Content>
+          <Text style={styles.title}>
+            Primeiro aplicativo em react agora com Native-Base(UI Lib).
+          </Text>
+        </Content>
+      </Container>
     );
   }
 }
@@ -20,11 +29,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 24,
     color: '#de1133',
   },
   parag: {
-    fontSize: 19,
     color: '#44AAEE',
   }
 });
